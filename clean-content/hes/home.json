@@ -1,0 +1,132 @@
+{
+    "resultInfo": {
+        "result": "success",
+        "resultCode": "200"
+    },
+    "content": {
+        "metaKeywords": "studio equipment, grip equipment, equipment rental, vehicle rental, lighting equipment, lighting rental, production equipment, film production equipment, entertainment services, tv studio equipment, live event production, cinema equipment, event equipment rental, entertainment equipment, studio equipment rental, television production equipment, turn-key services, television studio equipment, professional studio equipment",
+        "metaDescriptions": "Hertz Entertainment Services offers quality studio and production equipment for the event and entertainment industry.",
+        "title": "Hertz Entertainment Services - Production and Studio Equipment For Rent",
+        "h1": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/h1@value\">Studio and Production Equipment<\/dcs:content>",
+        "cart": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/cart@value\">Cart<\/dcs:content>",
+        "viewCart": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/viewCart@value\">View Cart<\/dcs:content>",
+        "menuNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/menuNav@value\">Menu<\/dcs:content>",
+        "ads_slides": [{
+            "metaData": "Equipment and Vehicle Rentals...",
+            "type": "TXT",
+            "clickUrl": "#",
+            "bgFallBackColor": "#EDEDED",
+            "seq": "1",
+            "contentPosition": "BL",
+            "videoUrl": "",
+            "imageUrl": "/hes/src/images/homepage/hertz-entertainment-equipment-vehicle-rental-986.jpg",
+            "size_1024": "/hes/src/images/homepage/hertz-entertainment-equipment-vehicle-rental-986.jpg",
+            "size_768": "/hes/src/images/homepage/hertz-entertainment-equipment-vehicle-rental-768.jpg",
+            "size_600": "/hes/src/images/homepage/hertz-entertainment-equipment-vehicle-rental-600.jpg",
+            "size_320": "/hes/src/images/homepage/hertz-entertainment-equipment-vehicle-rental-320.jpg",
+            "textContent": "",
+            "disabled": "false"
+        }, {
+            "metaData": "Hertz...Spotlighting the best....",
+            "type": "TXT",
+            "clickUrl": "#",
+            "bgFallBackColor": "#EDEDED",
+            "seq": "2",
+            "contentPosition": "BL",
+            "videoUrl": "",
+            "imageUrl": "/hes/src/images/homepage/hertz-entertainment-equipment-rental-986.jpg",
+            "size_1024": "/hes/src/images/homepage/hertz-entertainment-equipment-rental-986.jpg",
+            "size_768": "/hes/src/images/homepage/hertz-entertainment-equipment-rental-768.jpg",
+            "size_600": "/hes/src/images/homepage/hertz-entertainment-equipment-rental-600.jpg",
+            "size_320": "/hes/src/images/homepage/hertz-entertainment-equipment-rental-320.jpg",
+            "textContent": "",
+            "disabled": "false"
+        }],
+        "sidebar_slides": [{
+            "adLink": "https://www.hertzequip.com/herc/programs/index.jsp?targetPage=customerProgramsView.jsp&program=energy+services",
+            "adSrc": "/hes/src/images/misc/enUS/promo-banner_port-power.jpg",
+            "adAlt": "Portable Power"
+        }, {
+            "adLink": "javascript:;",
+            "adSrc": "/hes/src/images/misc/enUS/promo-banner_right-light.jpg",
+            "adAlt": "The Right Light - The Right Shot"
+        }],
+        "column_one_title": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_one_title@value\">About Us<\/dcs:content>",
+        "column_one": [{
+            "name": "Investor Relations",
+            "url": "https://www.hertz.com/rentacar/abouthertz/index.jsp?targetPage=investorrelations.jsp"
+        }, {
+            "name": "Jobs at Hertz",
+            "url": "#careers"
+        }, {
+            "name": "Living Journey - Sustainability",
+            "url": "http://www.hertzlivingjourney.com"
+        }, {
+            "name": "",
+            "url": ""
+        }, {
+            "name": "",
+            "url": ""
+        }, {
+            "name": "",
+            "url": ""
+        }, {
+            "name": "",
+            "url": ""
+        }, {
+            "name": "",
+            "url": ""
+        }],
+        "column_two_title": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_two_title@value\">Our Companies<\/dcs:content>",
+        "column_two": [{
+            "name": "Hertz Equipment Rental (HERC)",
+            "url": "http://www.hertzequip.com/"
+        }, {
+            "name": "Hertz Car Rental",
+            "url": "http://www.hertz.com/rentacar/reservation/home"
+        }, {
+            "name": "Hertz Car Sales - Used Car Sales",
+            "url": "http://www.hertzcarsales.com"
+        }, {
+            "name": "Hertz On Demand",
+            "url": "http://www.hertzondemand.com"
+        }, {
+            "name": "Service Pump and Compressor Rental",
+            "url": "https://www.spump.com"
+        }, {
+            "name": "Hertz Entertainment Services",
+            "url": "https://www.hertzentertainment.com/"
+        }, {
+            "name": "",
+            "url": ""
+        }, {
+            "name": "",
+            "url": ""
+        }],
+        "column_three_title": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_three_title@value\">Customer Service<\/dcs:content>",
+        "column_three_name": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_three_name@value\">HES Contact Info<\/dcs:content>",
+        "column_three_phone": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_three_phone@value\">877-HES-7320<\/dcs:content>",
+        "column_three_email": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_three_email@value\">HES@hertz.com<\/dcs:content>",
+        "column_four_title": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/column_four_title@value\">Follow Us<\/dcs:content>",
+        "column_four_facebook": "https://www.facebook.com/HertzEntertainmentServices",
+        "column_four_twitter": "https://twitter.com/HertzEntertain",
+        "column_four_google": "https://plus.google.com/108494224242178875964",
+        "column_four_linkedin": "http://www.linkedin.com/company/hertz-entertainment-services",
+        "bottom_phone": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/bottom_phone@value\">877-HES-7320 (877-437-7320)<\/dcs:content>",
+        "privacy_policy_name": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/privacy_policy_name@value\">Privacy Policy - Your Privacy Rights<\/dcs:content>",
+        "privacy_policy_url": "https://www.hertz.com/rentacar/navigation/templates/privacyPolicyView.jsp",
+        "legal_policy_name": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/legal_policy_name@value\">Legal<\/dcs:content>",
+        "legal_policy_url": "https://www.hertz.com/rentacar/navigation/enUS/legalView.jsp",
+        "contact_us_name": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/contact_us_name@value\">Contact Us<\/dcs:content>",
+        "contact_us_url": "#contact-us",
+        "full_website": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/full_website@value\">Full Website<\/dcs:content>",
+        "copyright": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/copyright@value\">&copy; 2014 Hertz Equipment Rental Corporation. All Rights Reserved.<\/dcs:content>",
+        "ContactUsNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/ContactUsNav@value\">Contact Us<\/dcs:content>",
+        "LocationsNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/LocationsNav@value\">Locations<\/dcs:content>",
+        "EquipmentNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/EquipmentNav@value\">Equipment<\/dcs:content>",
+        "VehiclesNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/VehiclesNav@value\">Vehicles<\/dcs:content>",
+        "LightingNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/LightingNav@value\">Lighting<\/dcs:content>",
+        "GripEquipmentNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/GripEquipmentNav@value\">Grip Equipment<\/dcs:content>",
+        "TruckPackagesNav": "<dcs:content target=\"/content/dcs/hes/US/enUS/home/jcr:content/TruckPackagesNav@value\">Truck Packages<\/dcs:content>"
+    }
+}
