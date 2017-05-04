@@ -1,0 +1,24 @@
+array=(
+cinelease_locations
+hes_equipment_categories
+hes_equipment_category_items
+hes_grip_categories
+hes_grip_category_package_items
+hes_grip_category_packages
+hes_lighting_categories
+hes_lighting_category_package_items
+hes_lighting_category_packages
+hes_locations
+hes_request_details
+hes_requests
+hes_truck_categories
+hes_truck_category_package_items
+hes_truck_category_packages
+hes_vehicle_categories
+hes_vehicle_category_items
+)
+for item in "${array[@]}"
+do
+    echo $item
+    mongoimport --db hesDB --collection $item --drop --file output/$item.json
+done
