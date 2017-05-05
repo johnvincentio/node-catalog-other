@@ -45,8 +45,13 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
                 result += str;
 //                console.log(str);
             }
-            console.log('Creating file '+OUTPUTDIR+item+'.json');
-            fs.writeFileSync(OUTPUTDIR + item+'.json', result);
+            let table = item.replace("hes_locations", "locations_1")
+                .replace("cinelease_locations", "locations_2")
+                .replace("hes_", "")
+                .replace("cinelease_", "");
+            let outfile = OUTPUTDIR+table+'.json';
+            console.log('Creating file '+outfile);
+            fs.writeFileSync(outfile, result);
         });
     });
     connection.end();
