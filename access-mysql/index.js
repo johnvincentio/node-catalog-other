@@ -38,9 +38,13 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
                 throw err;
             }
             console.log('\nData received from '+item);
+            let careful = (item === "hes_locations") || (item === "cinelease_locations");
             let result = "";
             for (var idx in rows) {
                 var row = rows[idx];
+                if (careful) {
+                    delete row.id;
+                }
                 var str = JSON.stringify(row);
                 result += str;
 //                console.log(str);
