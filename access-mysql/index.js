@@ -24,7 +24,6 @@ connection.connect();
 
 let tables = [];
 connection.query('SHOW TABLES', function(err, rows, fields) {
-//    console.log(rows);
     for (var idx in rows) {
         tables.push(rows[idx].Tables_in_hes_db);
     }
@@ -33,7 +32,7 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
 
         let sql = 'select * from ' + item;
 //        console.log("sql :"+sql);
-        connection.query(sql, function(err, rows){
+        connection.query(sql, function(err, rows) {
             if (err) {
                 throw err;
             }
@@ -45,14 +44,13 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
                 if (careful) {
                     delete row.id;
                 }
-                var str = JSON.stringify(row);
-                result += str;
-//                console.log(str);
+                result += JSON.stringify(row);
             }
             let table = item.replace("hes_locations", "locations_1")
                 .replace("cinelease_locations", "locations_2")
                 .replace("hes_", "")
                 .replace("cinelease_", "");
+
             let outfile = OUTPUTDIR+table+'.json';
             console.log('Creating file '+outfile);
             fs.writeFileSync(outfile, result);
