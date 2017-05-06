@@ -10,10 +10,11 @@ npm install xmldom --save
 'use strict';
 
 var fs = require('fs');
-var xpath = require('xpath'), dom = require('xmldom').DOMParser;
+var dom = require('xmldom').DOMParser;
 
 const DIRNAME = 'hes/';
 const OUTPUTDIR = 'output/';
+const DATA_FILE = 'data/data.json';
 
 // doTest('checkout.json');
 
@@ -21,24 +22,24 @@ doApp();
 
 function doApp() {
     try {
-        fs.readdir(DIRNAME, function(err, filenames) {
-            if (err) {
-                console.error("readdir error");
-                return;
-            }
-            filenames.forEach(function(filename) {
-                console.log(">>> File "+DIRNAME + filename);
-                fs.readFile(DIRNAME + filename, 'utf-8', function(err, content) {
-                    if (err) {
-                        console.error("readfile error; file "+DIRNAME + filename);
-                        return;
-                    }
-                    let result = onFileContent(filename, content);
-                    fs.writeFileSync(OUTPUTDIR + filename, JSON.stringify(result));
-                    console.log("<<< File "+DIRNAME + filename);
-                });
-            });
+        let all = [];
+        let filenames = fs.readdirSync(DIRNAME);
+        filenames.forEach(function(filename) {
+            console.log(">>> File "+DIRNAME + filename);
+            let content = fs.readFileSync(DIRNAME + filename, 'utf-8');
+
+            let data = onFileContent(filename, content);
+            all.push({table: filename, data});
+            fs.writeFileSync(OUTPUTDIR + filename, JSON.stringify(data));
+            console.log("<<< File "+DIRNAME + filename);
         });
+
+        console.log("before fs.writeFileSync(DATA_FILE");
+        all.forEach(function(item) {
+            fs.appendFileSync(DATA_FILE, JSON.stringify(item));
+        });
+        console.log("after fs.writeFileSync(DATA_FILE");
+
     }
     catch (e) {
         console.log('Error:', e.stack);
@@ -55,7 +56,7 @@ function onFileContent(filename, content) {
         if (obj.hasOwnProperty(key)) {
 //            console.log(key, obj[key]);
             let xml = obj[key];
-            let text = "";
+            let text = xml;
             if (xml !== "" && xml.includes("<dcs:content")) {
                 var doc = new dom().parseFromString(xml);
                 text = doc.firstChild.firstChild.data;
@@ -69,6 +70,6 @@ function onFileContent(filename, content) {
 
 function doTest(filename) {
     var str = fs.readFileSync(DIRNAME + filename, 'utf8');
-    let result = onFileContent(filename, str);
-    fs.writeFileSync(OUTPUTDIR + filename, JSON.stringify(result));
+    let data = onFileContent(filename, str);
+    fs.writeFileSync(OUTPUTDIR + filename, JSON.stringify(data));
 }
