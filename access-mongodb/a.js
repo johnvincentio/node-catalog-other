@@ -1,3 +1,10 @@
+/* jshint node: true */
+/* jshint esnext: true */
+
+/*
+npm install mongodb --save
+*/
+
 //lets require/import the mongodb native drivers.
 var mongodb = require('mongodb');
 
