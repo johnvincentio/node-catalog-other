@@ -23,5 +23,5 @@ do
     table=`echo $item | sed "s:\.json$::"`
     echo "Table $table JSON file $item"
     mongoimport --db node-catalog --collection $table --drop --file output/$item
-    mongoimport --db node-catalog --collection $table --drop --file output/$item --host ds163698.mlab.com --port 63698  -u jvuser -p
+    mongoimport --db node-catalog --collection $table --drop --file output/$item --host ds163698.mlab.com --port 63698  -u jvuser -p 
 done
