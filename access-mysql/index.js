@@ -37,13 +37,12 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
                 throw err;
             }
             console.log('\nData received from '+item);
-            let careful = (item === "hes_locations") || (item === "cinelease_locations");
+//            let careful = (item === "hes_locations") || (item === "cinelease_locations");
             let result = "";
             for (var idx in rows) {
                 var row = rows[idx];
-                if (careful) {
-                    delete row.id;
-                }
+                row._id = row.id;
+                delete row.id;
                 result += JSON.stringify(row);
             }
             let table = item.replace("hes_locations", "locations_1")
