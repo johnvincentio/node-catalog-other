@@ -8,8 +8,6 @@ npm install mysql --save
 
 'use strict';
 
-const OUTPUTDIR = 'output/';
-
 var fs = require('fs');
 
 var mysql      = require('mysql');
@@ -22,8 +20,11 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
+const OUTPUT_DIR = 'output/';
+const SCHEMA_DIR = 'schemas/';
+
 let tables = [];
-connection.query('SHOW TABLES', function(err, rows, fields) {
+connection.query('SHOW TABLES', function(err, rows) {
     for (var idx in rows) {
         tables.push(rows[idx].Tables_in_hes_db);
     }
@@ -45,15 +46,50 @@ connection.query('SHOW TABLES', function(err, rows, fields) {
                 delete row.id;
                 result += JSON.stringify(row);
             }
-            let table = item.replace("hes_locations", "locations_1")
-                .replace("cinelease_locations", "locations_2")
-                .replace("hes_", "")
-                .replace("cinelease_", "");
+            let table = updateTableName(item);
 
-            let outfile = OUTPUTDIR+table+'.json';
+            let outfile = OUTPUT_DIR+table+'.json';
             console.log('Creating file '+outfile);
             fs.writeFileSync(outfile, result);
+        });
+
+        connection.query('SHOW COLUMNS FROM '+item, function(err, cols) {
+            let str = '';
+            let table = updateTableName(item);
+            let result =`const ${table}Schema = mongoose.Schema({\n`;
+            cols.forEach(function(col) {
+                console.log(col);
+                let field = col.Field === 'id' ? "_id": col.Field;
+                let type = updateColumnType(col.Type);
+                let required = `${col.Null}` === "NO";
+                str += `\t${field}: {type: ${type}, required: ${required}},\n`;
+            });
+            result += `${str}}, {collection: '${table}'});`;
+
+            let schemafile = SCHEMA_DIR+table+'.js';
+            console.log('Creating file '+schemafile);
+            fs.writeFileSync(schemafile, result);
         });
     });
     connection.end();
 });
+
+function updateColumnType(type) {
+    if (type.includes('int(')) {
+        return 'Number';
+    }
+    if (type.includes('bigint(')) {
+        return 'Number';
+    }
+    if (type.includes('varchar(')) {
+        return 'String';
+    }
+}
+
+function updateTableName(table) {
+    let update = table.replace("hes_locations", "locations1")
+    .replace("cinelease_locations", "locations2")
+    .replace("hes_", "")
+    .replace("cinelease_", "");
+    return update;
+}

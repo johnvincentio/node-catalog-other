@@ -39,7 +39,6 @@ function doApp() {
             fs.appendFileSync(DATA_FILE, JSON.stringify(item));
         });
         console.log("after fs.writeFileSync(DATA_FILE");
-
     }
     catch (e) {
         console.log('Error:', e.stack);
